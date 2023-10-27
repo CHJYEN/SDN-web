@@ -1,6 +1,6 @@
 <template>
   <NConfigProvider
-    :theme="lightTheme"
+    :theme="darkTheme"
     :theme-overrides="themeOverrides"
     class="overflow-y-auto font-mono"
   >
@@ -12,7 +12,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { NConfigProvider, darkTheme, lightTheme } from "naive-ui";
+import { NConfigProvider, darkTheme } from "naive-ui";
 import { primaryColor, secondaryColor } from "./color";
 /**
  * @type import('naive-ui').GlobalThemeOverrides
@@ -20,9 +20,9 @@ import { primaryColor, secondaryColor } from "./color";
 const themeOverrides = {
   common: {
     primaryColor,
-    primaryColorHover: "#FFC0CBFF",
-    primaryColorPressed: "#FFB6C1FF",
-    primaryColorSuppl: "#F08080FF",
+    primaryColorHover: "#BFE8FFFF",
+    primaryColorPressed: "#4190BCFF",
+    primaryColorSuppl: "#296E95FF",
   },
   Table: {
     tdColor: "rgba(0,0,0,0)",
@@ -31,7 +31,7 @@ const themeOverrides = {
   DataTable: {
     tdColor: "rgba(0,0,0,0)",
     thColor: secondaryColor,
-    tdColorHover: "rgb(255,182,193,0.3)",
+    tdColorHover: "rgb(133,199,236,0.3)",
   },
 };
 
